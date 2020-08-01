@@ -3,6 +3,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 
+
 const questions = [ 
     {
     type: 'input',
@@ -59,6 +60,10 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions)
         .then ((responses) => {
+            console.log(responses);
+            let text = generateMarkdown(responses);
+            let fileName = './' + responses.name.replace(' ', '-') + ".md";
+            console.log(text);
             writeToFile();
         })
 
