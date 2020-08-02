@@ -3,10 +3,10 @@
   ## Table of Contents
   
    * [Description](#description)
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [contribution](#contribution)
-    * [License](#license)
+   * [Installation](#installation)
+   * [Usage](#usage)
+   * [contribution](#contribution)
+   * [License](#license)
     
   ## Description
   Using node.js and npm package I have created a readme generator to streamline the making of readmes.
