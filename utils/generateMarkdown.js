@@ -12,13 +12,13 @@ function generateMarkdown({name, description, installation, usage, contribution,
   return `# ${name}
   ${badge(license)}
   ## Table of Contents
-  <ol>
-    <li>[${description}](#description)</li>
-    <li>[${installation}](#installation)</li>
-    <li>[${usage}](#usage)</li>
-    <li>[${contribution}](#contribution)</li>
-    <li>[${license}](#license)</li>
-    <li>[${questions}](#questions)</li>
+    * [Description](#description)
+    * [Installation](#installation)
+    * [Usage](#usage)
+    * [contribution](#contribution)
+    * [License](#license)
+    * [Questions](#questions)
+    
   ## Description
   ${description}
   <br />
