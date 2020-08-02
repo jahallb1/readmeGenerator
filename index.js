@@ -64,10 +64,12 @@ const questions = [
 }
 ];
 
+
+
 // function to write README file
 function writeToFile(fileName, data) {
     return new Promise((resolve, reject) => {
-        fs.writeFile('./dist/README.txt', data, err => {
+        fs.writeFile(`./dist/${fileName}`, data, err => {
         if (err) {
             reject (err)
         }
@@ -84,12 +86,12 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions)
         .then ((responses) => {
-            console.log(responses);
             let text = generateMarkdown(responses);
             let fileName = './' + responses.name.replace(' ', '-') + ".md";
-            console.log(text);
-            writeToFile();
-        })
+            writeToFile(fileName, text);
+        }).catch(err => {
+            console.log(err);
+        }) 
 
 }
 

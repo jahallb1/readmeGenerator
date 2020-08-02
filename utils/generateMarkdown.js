@@ -1,35 +1,45 @@
 // function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.name}
+function badge(license) {
+  if (license === 'MIT') {
+     return '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)';
+  } else if (license === 'BSD') {
+      return '[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)'
+  } else { 
+      return ' ';
+  }
+}
+function generateMarkdown({name, description, installation, usage, contribution,license, githubName, emailAddress}) {
+  return `# ${name}
+  ${badge(license)}
   ## Table of Contents
   <ol>
-    <li>Description</li>
-    <li>Installation</li>
-    <li>Usage</li>
-    <li>Contribution</li>
-    <li>License</li>
-    <li>Questions</li>
+    <li>[${description}](#description)</li>
+    <li>[${installation}](#installation)</li>
+    <li>[${usage}](#usage)</li>
+    <li>[${contribution}](#contribution)</li>
+    <li>[${license}](#license)</li>
+    <li>[${questions}](#questions)</li>
   ## Description
-  ${data.description}
+  ${description}
   <br />
   ## Installation
-  ${data.installation}
+  ${installation}
   <br />
   ## Usage
-  ${data.usage}
+  ${usage}
   <br />
   ## Contribution
-  ${data.contribution}
+  ${contribution}
   <br />
   ## License
-  ${data.license}
+  ${license}
   <br />
   ## Questions
   <p>For more prjoects and to see what I am working on visit my Github page.<a href="https://github.com/${githubName}</a></p>
   <p>For more information about this project please email me at ${emailAddress}</p>
   <br />
 
-  ${new Date().getFullYear}
+  ${new Date().getFullYear()}
 
 `;
 }
