@@ -5,8 +5,9 @@
    * [Description](#description)
    * [Installation](#installation)
    * [Usage](#usage)
-   * [contribution](#contribution)
+   * [Contribution](#contribution)
    * [License](#license)
+   * [Questions](#questions)
     
   ## Description
   Using node.js and npm package I have created a readme generator to streamline the making of readmes.
