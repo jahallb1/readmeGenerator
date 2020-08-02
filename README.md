@@ -2,11 +2,11 @@
    
   ## Table of Contents
   <ol>
-    <li>[Using node.js and npm package I have created a readme generator to streamline the making of readmes.](#description)</li>
-    <li>[To install this use git init and git install inquirer.](#installation)</li>
-    <li>[To make readme files](#usage)</li>
-    <li>[Email me below](#contribution)</li>
-    <li>[MIT](#license)</li>
+    *[${description}](#description)
+    *[${installation}](#installation)
+    *[${usage}](#usage)
+    *[${contribution}](#contribution)
+    *[${license}](#license)
     
   ## Description
   Using node.js and npm package I have created a readme generator to streamline the making of readmes.
