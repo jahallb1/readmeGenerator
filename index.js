@@ -2,6 +2,8 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
+const { resolve } = require('path');
+const { rejects } = require('assert');
 
 
 const questions = [ 
@@ -49,12 +51,34 @@ const questions = [
     name: 'license',
     message: 'Which license would you like to use?',
     choices: ['MIT', 'BSD', 'UNKNOWN']
+},
+{
+    type: 'input',
+    name: 'githubName',
+    message: 'What is your github user name?'
+},
+{
+    type: 'input',
+    name: 'emailAddress',
+    message: 'What is your email?'
 }
 ];
 
 // function to write README file
 function writeToFile(fileName, data) {
-}
+    return new Promise((resolve, reject) => {
+        fs.writeFile('./dist/README.txt', data, err => {
+        if (err) {
+            reject (err)
+        }
+
+        resolve({
+            ok: true,
+            message: 'File created!'
+        });
+    });
+    });
+};
 
 // function to initialize program
 function init() {
