@@ -1,12 +1,12 @@
 # Readme Generator
    
   ## Table of Contents
-  <ol>
-    *[${description}](#description)
-    *[${installation}](#installation)
-    *[${usage}](#usage)
-    *[${contribution}](#contribution)
-    *[${license}](#license)
+  
+    * [${description}](#description)
+    * [${installation}](#installation)
+    * [${usage}](#usage)
+    * [${contribution}](#contribution)
+    * [${license}](#license)
     
   ## Description
   Using node.js and npm package I have created a readme generator to streamline the making of readmes.
